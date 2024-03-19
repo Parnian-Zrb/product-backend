@@ -14,6 +14,10 @@ const productSchema = new Schema({
     type: String,
     required: [true, "Category field cannot be empty"],
   },
+  image: {
+    type: String,
+    required: [true],
+  },
   price: {
     type: String,
     required: [true, "Price field cannot be empty"],
