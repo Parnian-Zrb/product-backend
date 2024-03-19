@@ -9,8 +9,9 @@ app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    // "https://prn-product-inventor.netlify.app/",
+    origin:
+      // "http://localhost:5173",
+      "https://prn-product-inventor.netlify.app",
   })
 );
 // ROUTES
