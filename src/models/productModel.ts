@@ -4,12 +4,11 @@ const productSchema = new Schema({
   title: {
     type: String,
     required: [true, "Title is required!"],
-    maxlength: 50,
+    maxlength: 250,
   },
   description: {
     type: String,
     required: [true, "Descriprtion is required!"],
-    maxLength: 256,
   },
   category: {
     type: String,
@@ -21,8 +20,6 @@ const productSchema = new Schema({
   },
   rating: {
     type: Number,
-    min: 1,
-    max: 5,
   },
 });
 
