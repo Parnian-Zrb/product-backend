@@ -51,3 +51,19 @@ export const getProduct = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const deleteProduct = async (req: Request, res: Response) => {
+  try {
+    const data = await Products.findById(req.params.id);
+
+    res.status(200).json({
+      status: "success",
+      data,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
