@@ -54,7 +54,7 @@ export const getProduct = async (req: Request, res: Response) => {
 
 export const deleteProduct = async (req: Request, res: Response) => {
   try {
-    const data = await Products.findById(req.params.id);
+    const data = await Products.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
       status: "success",
